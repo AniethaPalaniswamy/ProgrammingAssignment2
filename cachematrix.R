@@ -40,6 +40,14 @@ cacheSolve <- function(x, ...) {
   x$setinverse(m_t)
   m_t  
 }
+#############Here we can see the functions being called and using the cache
+mat_cal <- matrix(c(20,22,46,55,12,33,32,2,4,89,99,16,7,29,78,64), nrow=4, byrow=T)
+mat_cal
+mat_invcal <- makeCacheMatrix(mat_cal)# function is used to create  the cached matrix object 
+mat_invcal
+final_inv <- cacheSolve(mat_invcal)
+final_inv # here it calculates or retrives  the inverse of matrix
+final_inv <- cacheSolve(mat_invcal)
 
 
 
